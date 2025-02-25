@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --main-ffam: "Karla", serif; 
+  --font-weight-title: 700;
+  --font-weight-descr: 400;
+  --main-color1: #2AB3B1;
+  --main-color2: #C0DF33;
+  --main-color2-hover:#a8c429;
+  --main-neutral1: hsl(204, 43%, 93%);
+  --main-neutral2: #9AA7BE;
+  --bg-color: #E6EFF5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-dc{
+  flex-direction: column;
+}
+
+.flex-cc{
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-jfs{
+  justify-content: flex-start;
+}
+
+.flex-afs{
+  align-items: flex-start;
+}
+
+body{
+  background-color: var(--bg-color);
+  font-family: var(--main-ffam);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  letter-spacing: -0.2px;
+}
+
+.component{
+  background-color: #fff;
+  max-width: 635px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 10px 10px 0px rgb(0, 0, 0, 0.1);
+  font-weight: var(--font-weight-descr);
+}
+
+.component__title, 
+.component__subtitle, 
+.subscription__price, 
+.subscription > div > span:first-child, 
+.btn
+{
+  font-weight: var(--font-weight-title);
+}
+
+.component__title, .component__subtitle{
+  font-size: 1.125rem;
+}
+
+.component__block{
+  background-color: var(--main-color1);
+  width: 50%;
+  padding: 2.5rem;
+}
+
+.component__block-sec{
+  background-color: hsla(179, 62%, 43%, 0.847);
+}
+
+.component__block-sec > .component__title{
+  padding-bottom: 1.125rem;
+}
+
+.component__title-diff{
+  color: var(--main-color1);
+  font-size: 1.5rem;
+}
+
+.component__subtitle-diff{
+  color: var(--main-color2);
+}
+
+.component__descr{
+  color: var(--main-neutral2);
+  font-size: 1rem;
+}
+
+.component__descr-light, .btn, .component{
+  color: #fff;
+}
+
+.component__descr-light{
+  opacity: 0.75;
+  line-height: 20px;
+  font-size: 14px;
+  max-width: 176px;
+}
+
+.component__header{
+  gap: 0.75rem;
+  padding: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.subscription{
+  gap: 0.75rem;
+  padding-top: 1.125rem;
+  padding-bottom: 0.25rem;
+}
+
+.subscription > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.subscription > div > span:first-child{
+  font-size: 2rem;
+}
+
+.subscription > div > span:last-child{
+  line-height: 26px;
+  opacity: 0.5;
+}
+
+.btn{
+  border-radius: 0.25rem;
+  box-shadow: 0px 10px 10px 0px rgb(0, 0, 0, 0.1);
+  background-color: var(--main-color2);
+  width: 100%;
+  border: 0px;
+  padding: 0.875rem 5.5rem;
+  letter-spacing: -0.2px;
+  margin-top: 1.625rem;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+}
+
+.btn:hover{
+  background-color: var(--main-color2-hover);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and ( max-width: 375px ){
+
+  body{
+    padding-block: 72px;
+  }
+
+  .component{
+    max-width: calc(100% - 32px);
+    margin: 0 auto;
+    border-radius: unset;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+  }
+
+  .component__header{
+    gap:1.25rem
+  }
+
+  .component__body{
+    flex-direction: column;
+  }
+
+  .component__block{
+    width: unset;
+    padding: 1.5rem;
+  }
+
+  .component__subtitle{
+    font-size: 0.9375rem;
+  }
+
+  .component__title-diff{
+    font-size: 1.25rem;
+  }
+
+  .component__descr{
+    font-size: 0.875rem;
+    line-height: 26px;
+  }
+
+  .component__descr-light{
+    line-height: 20px;
+  }
+}
