@@ -18,4 +18,6 @@ To view a project solution, follow these steps:
 3. Run `npm install` to install the dependencies according to the `package.json`.
 4. Run `npm run dev` to start Vite and preview the developed project.
 
-Feel free to explore the projects, give feedback, or suggest improvements! 🚀
+## ✅ Completed Projects
+- **Social links profile Component**
+- **Single price grid component**
