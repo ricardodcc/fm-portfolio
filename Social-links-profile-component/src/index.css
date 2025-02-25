@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --bg-color:         #141414;
+    --bg-card:          #1F1F1F;
+    --bg-card-option:   #333;
+    --color-green:      #C4F82A;
+
+    --fs-preset-1: 1.5rem;
+    --fs-preset-2: 0.875rem;
+
+    --fm-main: "Inter", serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-dc{
+    flex-direction: column;
+}
+
+.flex-cc{
+    justify-content: center;
+    align-items: center;
+}
+
+.box-img{
+    display: block;
+}
+
+.list-no-style{
+    list-style: none;
+}
+
+.card{
+    text-align: center;
+    gap:1.5rem;
+    padding: 2.5rem;
+    background-color: var(--bg-card);
+    color: #fff;
+    border-radius: 0.75rem;
+}
+
+.card *{
+    font-weight: bold;
+    line-height: 150%;
+    font-family: var(--fm-main);
+    font-size: var(--fs-preset-2);
+}
+
+.card__img{
+    border-radius: 999px;
+    max-width: 88px;
+    margin: 0 auto;
+}
+
+.card__main p:first-child{
+    font-size: var(--fs-preset-1);
+    margin-bottom: 0.25rem;
+}
+
+.card__main p:last-child{
+    color: var(--color-green);
+}
+
+.card__descr{
+    font-weight: 400;
+}
+
+.card__social{
+    gap:1rem;
+}
+
+.btn{
+    background-color: var(--bg-card-option);
+    color: #fff;
+    border: 0px;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    min-width: -webkit-fill-available;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.btn:hover{
+    color: var(--bg-card-option);
+    background-color: var(--color-green);
+}
+
+@media screen and ( max-width: 375px ){
+    .card{
+        padding: 1.5rem;
+    }
+}
